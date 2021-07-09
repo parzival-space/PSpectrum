@@ -48,6 +48,8 @@ jobs:
       # push to powercord plugin
       - name: push to powercord plugin
         run: |
+          git config --global user.email "malte.linke.ml@gmai.com"
+          git config --global user.name "malte-linke"
           git clone https://.:${{ secrets.API_TOKEN_GITHUB }}@github.com/malte-linke/powercord-pspectrum.git target
           cp .\PSpectrum\bin\Release\PSpectrum.exe .\target\bin\PSpectrum.exe
           cd target
