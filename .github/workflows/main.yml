@@ -55,7 +55,7 @@ jobs:
           cd target
           git add .
           git diff-index --quiet HEAD || git commit -m "Updated PSpectrum.exe"
-          git push target master
+          git push target main
           cd ..
           Remove-Item -Recurse -Force .\target
 
