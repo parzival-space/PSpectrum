@@ -14,3 +14,10 @@ D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\D
 D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Debug\PSpectrum.csproj.CoreCompileInputs.cache
 D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Debug\PSpectrum.exe
 D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Debug\PSpectrum.pdb
+C:\Users\malte\source\repos\C#\PSpectrum\PSpectrum\bin\Debug\PSpectrum.exe.config
+C:\Users\malte\source\repos\C#\PSpectrum\PSpectrum\obj\Debug\PSpectrum.csproj.AssemblyReference.cache
+C:\Users\malte\source\repos\C#\PSpectrum\PSpectrum\obj\Debug\PSpectrum.Properties.Resources.resources
+C:\Users\malte\source\repos\C#\PSpectrum\PSpectrum\obj\Debug\PSpectrum.csproj.GenerateResource.cache
+C:\Users\malte\source\repos\C#\PSpectrum\PSpectrum\obj\Debug\PSpectrum.csproj.CoreCompileInputs.cache
+C:\Users\malte\source\repos\C#\PSpectrum\PSpectrum\obj\Debug\PSpectrum.exe
+C:\Users\malte\source\repos\C#\PSpectrum\PSpectrum\obj\Debug\PSpectrum.pdb
