@@ -1,0 +1,15 @@
+C:\Users\malte\Downloads\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\bin\Release\PSpectrum.exe.config
+C:\Users\malte\Downloads\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.exe.config
+C:\Users\malte\Downloads\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.Properties.Resources.resources
+C:\Users\malte\Downloads\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.csproj.GenerateResource.cache
+C:\Users\malte\Downloads\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.csproj.CoreCompileInputs.cache
+C:\Users\malte\Downloads\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.exe
+C:\Users\malte\Downloads\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.pdb
+D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\bin\Release\PSpectrum.exe.config
+D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.csproj.AssemblyReference.cache
+D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.exe.config
+D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.Properties.Resources.resources
+D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.csproj.GenerateResource.cache
+D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.csproj.CoreCompileInputs.cache
+D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.exe
+D:\Projekte\C#\C# Audio Spectrum Analyzer (SOURCE) [CYBERS-TEAM]\PSpectrum\obj\Release\PSpectrum.pdb
