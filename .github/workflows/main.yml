@@ -47,13 +47,12 @@ jobs:
         
       # push to powercord plugin
       - name: push to powercord plugin
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: 'PSpectrum/bin/Release/PSpectrum.exe'
-          destination_repo: 'malte-linke/powercord-pspectrum'
-          destination_folder: 'bin'
-          user_email: 'malte.linke.ml@gmail.com'
-          user_name: 'malte-linke'
-          commit_message: 'Updated PSpectrum.exe'
+        run: |
+          git clone https://.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@github.com/malte-linke/powercord-pspectrum.git target
+          cp .\PSpectrum\bin\Release\PSpectrum.exe .\target\bin\PSpectrum.exe
+          cd target
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Updated PSpectrum.exe"
+          git push target master
+          Remove-Item -Recurse -Force .\target
+
