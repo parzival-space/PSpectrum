@@ -54,7 +54,7 @@ jobs:
           cp .\PSpectrum\bin\Release\PSpectrum.exe .\target\bin\PSpectrum.exe
           cd target
           git add .
-          git diff-index --quiet HEAD || git commit -m "Updated PSpectrum.exe"
+          git diff-index --quiet HEAD || git commit -m "Automated update of PSpectrum.exe"
           git push https://malte-linke:${{ secrets.API_TOKEN_GITHUB }}@github.com/malte-linke/powercord-pspectrum.git
           cd ..
           Remove-Item -Recurse -Force .\target
