@@ -83,38 +83,10 @@ namespace PSpectrum
             _t.Elapsed += (s, e) =>
             {
                 // get raw data
-                int dataRaw = BassWasapi.BASS_WASAPI_GetData(_buffer, (int)BASSData.BASS_DATA_FFT8192);  //get ch.annel fft data
+                int dataRaw = BassWasapi.BASS_WASAPI_GetData(_buffer, (int)BASSData.BASS_DATA_FFT8192);  //get channel fft data
                 if (dataRaw < -1) return;
 
                 int shift = 15;
-
-                // convert raw data to 128 channels (64 left / 64 right)
-                /*float[] data = new float[128];
-                int range = (_buffer.Length / 3) / (data.Length / 2); // calculate the range of frequencys
-                for (int i = 0; i < (data.Length / 2) + shift; i++)
-                {
-                    if (i < shift) continue;
-                    float dataTemp = 0;
-                    for (int j = 0; j < range; j++)
-                    {
-                        dataTemp += (_buffer[j + (range * i)] < 0) ? 0 : _buffer[j + (range * i)];
-                    }
-
-                    // get channel audio level
-                    int level = BassWasapi.BASS_WASAPI_GetLevel();
-                    var audioLeft = Utils.LowWord32(level);
-                    var audioRight = Utils.HighWord32(level);
-
-                    int leftMult = ushort.MaxValue / ((audioLeft == 0) ? 1 : audioLeft);
-                    int rightMult = ushort.MaxValue / ((audioRight == 0) ? 1 : audioRight);
-
-
-                    // channel left
-                    data[i-shift] = dataTemp * leftMult;
-
-                    // channel right
-                    data[i- shift + 64] = dataTemp * rightMult;
-                }*/
 
                 // alternative channel selector
                 float[] data = new float[256];
@@ -140,7 +112,11 @@ namespace PSpectrum
                 }
 
                 // send to user
-                if (DataReady != null) DataReady(this, data);
+                if (DataReady != null)
+                {
+                    data = PreventOverdraw(data);
+                    DataReady(this, data);
+                }
             };
             _t.Interval = 25; // 40Hz
         }
@@ -161,6 +137,22 @@ namespace PSpectrum
         {
             BassWasapi.BASS_WASAPI_Stop(true);
             _t.Stop();
+        }
+
+        private float[] PreventOverdraw(float[] input)
+        {
+            float[] result = new float[256];
+
+            // check if any value exceeds 5 (overdraw)
+            var hasOverdraw = false;
+            foreach (var d in input)
+            {
+                if (d >= 5) hasOverdraw = true;
+            }
+
+            // return null-array if overdraw is detected
+            if (hasOverdraw) return result;
+            else return input;
         }
     }
 }
