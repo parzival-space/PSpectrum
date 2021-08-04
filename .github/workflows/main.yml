@@ -58,4 +58,11 @@ jobs:
           git push https://malte-linke:${{ secrets.API_TOKEN_GITHUB }}@github.com/malte-linke/powercord-pspectrum.git
           cd ..
           Remove-Item -Recurse -Force .\target
-
+      
+      # create new release of PSpectrum.exe
+      - name: Release PSpectrum.exe
+        uses: djnicholson/release-action@v2.10
+        with:
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          asset-name: PSpectrum.exe
+          file: .\target\bin\PSpectrum.exe
