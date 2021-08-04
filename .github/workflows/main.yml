@@ -64,5 +64,7 @@ jobs:
         uses: djnicholson/release-action@v2.10
         with:
           token: ${{ secrets.API_TOKEN_GITHUB }}
-          asset-name: PSpectrum.exe
-          file: .\target\bin\PSpectrum.exe
+          release-name: 'Latest rolling build'
+          tag-name: 'Release'
+          asset-name: 'PSpectrum.exe'
+          file: 'target/bin/PSpectrum.exe'
