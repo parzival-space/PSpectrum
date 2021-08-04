@@ -67,4 +67,4 @@ jobs:
           release-name: 'Latest rolling build'
           tag-name: 'Release'
           asset-name: 'PSpectrum.exe'
-          file: 'target/bin/PSpectrum.exe'
+          file: target\bin\PSpectrum.exe
