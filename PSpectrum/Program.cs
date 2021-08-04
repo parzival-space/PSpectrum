@@ -103,7 +103,6 @@ namespace PSpectrum
                     int leftMult = ushort.MaxValue / ((audioLeft == 0) ? 1 : audioLeft);
                     int rightMult = ushort.MaxValue / ((audioRight == 0) ? 1 : audioRight);
 
-
                     // channel left
                     data[i - shift] = dataTemp * leftMult;
 
@@ -143,11 +142,11 @@ namespace PSpectrum
         {
             float[] result = new float[256];
 
-            // check if any value exceeds 5 (overdraw)
+            // check if any value exceeds 3 (overdraw)
             var hasOverdraw = false;
             foreach (var d in input)
             {
-                if (d >= 5) hasOverdraw = true;
+                if (d >= 3) hasOverdraw = true;
             }
 
             // return null-array if overdraw is detected
