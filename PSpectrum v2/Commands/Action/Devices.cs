@@ -39,7 +39,7 @@ namespace PSpectrum.Commands.Action
                 if (opts.OutputOnly && device.IsInput) return;
                 if (opts.ShowEnabled && !device.IsEnabled) return;
                 if (opts.ShowLoopback && !device.IsLoopback) return;
-                if (!String.IsNullOrEmpty(opts.Name) && device.name != opts.Name) return;
+                if (!String.IsNullOrEmpty(opts.Name) && !device.name.Contains(opts.Name)) return;
 
                 Console.WriteLine(
                     "{0} {1} {2} {3} {4} {5}",
