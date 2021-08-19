@@ -14,10 +14,13 @@ namespace PSpectrum.Commands.Format
         [Option('n', "name", Required = false, HelpText = "Only show devices that match the provided name.")]
         public string Name { get; set; }
 
-        [Option('i', "input-only", Default = false, HelpText = "If enabled, only shows input devices.")]
-        public bool InputOnly { get; set; }
+        [Option('i', "input", Default = false, HelpText = "Only display devices that are input devices.")]
+        public bool ShowInput { get; set; }
 
-        [Option('o', "output-only", Default = false, HelpText = "If enabled, only shows output devices.")]
-        public bool OutputOnly { get; set; }
+        [Option('o', "output", Default = false, HelpText = "Only display devices that are output devices.")]
+        public bool ShowOutput { get; set; }
+
+        [Option('d', "default", Default = false, HelpText = "Only display devices that are default devices.")]
+        public bool ShowDefault { get; set; }
     }
 }

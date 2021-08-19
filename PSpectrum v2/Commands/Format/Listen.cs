@@ -13,10 +13,18 @@ namespace PSpectrum.Commands.Format
         [Option('r', "rate", Default = 25, HelpText = "Specifies the polling rate.")]
         public int PollingRate { get; set; }
 
-        [Option('n', "normalization", Default = 0, HelpText = "Specifies the number of normalization levels.")]
-        public int NormalizationLevel { get; set; }
+        [Option('n', "normalization", Default = NormType.None, HelpText = "Specifies the normalization level. Can be one of the following: None, Fast, Normal, Slow")]
+        public NormType Normalization { get; set; }
 
-        [Option('d', "device", Default = -1, HelpText = "Specifies which audio device to use. You must specify the appropriate device ID.")]
+        [Option('d', "device", Default = 0, HelpText = "Specifies which audio device to use. You must specify the appropriate device ID. Trys to get your current output device by default.")]
         public int DeviceID { get; set; }
+
+        public enum NormType
+        {
+            None,
+            Fast,
+            Normal,
+            Slow
+        }
     }
 }

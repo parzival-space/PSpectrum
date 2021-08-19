@@ -11,3 +11,13 @@ C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\test.pdb
 C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\Bass.Net.dll
 C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum.Properties.Resources.resources
 C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum v2.csproj.GenerateResource.cache
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\System.Text.Json.dll
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\System.Memory.dll
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\System.Buffers.dll
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\test.exe.config
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\Newtonsoft.Json.xml

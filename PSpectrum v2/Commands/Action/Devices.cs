@@ -22,33 +22,30 @@ namespace PSpectrum.Commands.Action
             }
 
             // get list of devices
-            var devices = new List<BASS_WASAPI_DEVICEINFO>();
-            var id = -1;
+            var devices = Utils.BassGeneric.GetDevices();
             var offset = 0;
-            for (int i = 0; i < BassWasapi.BASS_WASAPI_GetDeviceCount(); i++) devices.Add(BassWasapi.BASS_WASAPI_GetDeviceInfo(i));
-            devices.ForEach((device) => { if (device.name.Length > offset) offset = device.name.Length; });
+            devices.ForEach((device) => { if (device.Name.Length > offset) offset = device.Name.Length; });
 
             // try to print them somewhat readable
             Console.WriteLine("ID".PadRight(4) + " " + "Name".PadRight(offset + 2) + " " + "Loopback Enabled Default I/O");
             devices.ForEach((device) =>
             {
-                id++;
-
                 // check if filters match to device
-                if (opts.InputOnly && !device.IsInput) return;
-                if (opts.OutputOnly && device.IsInput) return;
-                if (opts.ShowEnabled && !device.IsEnabled) return;
-                if (opts.ShowLoopback && !device.IsLoopback) return;
-                if (!String.IsNullOrEmpty(opts.Name) && !device.name.Contains(opts.Name)) return;
+                if (opts.ShowInput && !device.Input) return;
+                if (opts.ShowOutput && device.Input) return;
+                if (opts.ShowEnabled && !device.Enabled) return;
+                if (opts.ShowLoopback && !device.Loopback) return;
+                if (opts.ShowDefault && !device.Default) return;
+                if (!String.IsNullOrEmpty(opts.Name) && !device.Name.Contains(opts.Name)) return;
 
                 Console.WriteLine(
                     "{0} {1} {2} {3} {4} {5}",
-                    id.ToString().PadRight(4),
-                    device.name.PadRight(offset + 2),
-                    (device.IsLoopback ? "X" : "").PadLeft(4).PadRight(8),
-                    (device.IsEnabled ? "X" : "").PadLeft(4).PadRight(7),
-                    (device.IsDefault ? "X" : "").PadLeft(4).PadRight(7),
-                    device.IsInput ? " I " : " O "
+                    device.Id.ToString().PadRight(4),
+                    device.Name.PadRight(offset + 2),
+                    (device.Loopback ? "X" : "").PadLeft(4).PadRight(8),
+                    (device.Enabled ? "X" : "").PadLeft(4).PadRight(7),
+                    (device.Default ? "X" : "").PadLeft(4).PadRight(7),
+                    device.Input ? " I " : " O "
                 );
             });
 
