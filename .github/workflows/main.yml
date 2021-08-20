@@ -39,11 +39,11 @@ jobs:
         
       # restore nuget packages
       - name: restore nuget packages
-        run: nuget restore "Audio Spectrum.sln"
+        run: nuget restore "PSpectrum v2\\PSpectrum v2.csproj"
         
       # build
       - name: build
-        run: msbuild "Audio Spectrum.sln" /p:Configuration=Release /p:GeneratePackageOnBuild=false
+        run: msbuild "PSpectrum v2\\PSpectrum v2.csproj" /p:Configuration=Release /p:GeneratePackageOnBuild=false
         
       # push to powercord plugin
       - name: push to powercord plugin
@@ -64,7 +64,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.API_TOKEN_GITHUB }}
-          file: PSpectrum\bin\Release\PSpectrum.exe
+          file: "PSpectrum v2\\bin\\Release\\PSpectrum.exe"
           asset_name: PSpectrum.exe
           tag: Release
           prerelease: false
