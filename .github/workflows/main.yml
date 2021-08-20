@@ -39,7 +39,7 @@ jobs:
         
       # restore nuget packages
       - name: restore nuget packages
-        run: nuget restore "PSpectrum.sln"
+        run: nuget restore "Audio Spectrum.sln"
         
       # build
       - name: build
