@@ -76,7 +76,7 @@ As I mentioned earlier, v2 also has a demo visualizer running in your browser. F
   ```cmd
   PSpectrum.exe listen -b 64
   ```
-  <img src="https://i.imgur.com/KK3yjXr.gif">
+  <img src="https://i.imgur.com/Iagc9NI.gif">
 </details>
 
 <details>
