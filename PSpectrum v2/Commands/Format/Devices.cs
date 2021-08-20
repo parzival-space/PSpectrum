@@ -3,7 +3,7 @@
 namespace PSpectrum.Commands.Format
 {
     [Verb("devices", HelpText = "Displays the currently connected devices and the associated ID.")]
-    class Devices
+    internal class Devices
     {
         [Option('e', "enabled", Default = false, HelpText = "Only display devices that are enabled.")]
         public bool ShowEnabled { get; set; }

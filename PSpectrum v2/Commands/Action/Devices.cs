@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Un4seen.Bass;
-using Un4seen.BassWasapi;
+﻿using PSpectrum.Utils;
+using System;
 
 namespace PSpectrum.Commands.Action
 {
-    class Devices
+    internal class Devices
     {
         public static int Execute(Format.Devices opts)
         {
-            Utils.BassSetup.Install();
-
             // init bass
-            if (!Utils.BassGeneric.InitBass())
+            if (!BassGeneric.InitBass())
             {
                 Console.WriteLine("Error: Failed to initiate Bass!");
                 return 1;
             }
 
             // get list of devices
-            var devices = Utils.BassGeneric.GetDevices();
+            var devices = BassGeneric.GetDevices();
             var offset = 0;
             devices.ForEach((device) => { if (device.Name.Length > offset) offset = device.Name.Length; });
 

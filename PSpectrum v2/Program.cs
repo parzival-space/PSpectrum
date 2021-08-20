@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommandLine;
-using PSpectrum.Commands;
+﻿using CommandLine;
 
 namespace PSpectrum
 {
-    class Program
+    internal class Program
     {
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
-            return Parser.Default.ParseArguments<Commands.Format.Devices, Commands.Format.Listen>(args)
+            return Parser.Default.ParseArguments<Commands.Format.Devices, Commands.Format.Listen, Commands.Format.Web>(args)
                 .MapResult(
                     (Commands.Format.Devices a) => Commands.Action.Devices.Execute(a),
-                    (Commands.Format.Listen  a) => Commands.Action.Listen.Execute(a),
+                    (Commands.Format.Listen a) => Commands.Action.Listen.Execute(a),
+                    (Commands.Format.Web a) => Commands.Action.Web.Execute(a),
 
                     errs => 1
                 );

@@ -1,29 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Newtonsoft.Json;
 using PSpectrum.Utils;
-using System.Threading.Tasks;
+using System;
 using System.Diagnostics;
-using Un4seen.BassWasapi;
-using Un4seen.Bass;
-using Newtonsoft.Json;
 
 namespace PSpectrum.Commands.Action
 {
-    class Listen
+    internal class Listen
     {
         public static int Execute(Format.Listen opts)
         {
-            BassSetup.Install();
+            // init bass
+            if (!BassGeneric.InitBass())
+            {
+                Console.WriteLine("Error: Failed to initiate Bass!");
+                return 1;
+            }
+
+            // prepare normalizer
+            Normalizer normalizer = new Normalizer(opts.Normalization);
 
             // create bass watcher
             BassGeneric.Watcher watcher = new BassGeneric.Watcher(opts.DeviceID, opts.PollingRate);
             watcher.Data += (float[] buffer) =>
             {
-                var data = BassGeneric.TranslateData(buffer, 14);
+                var data = BassGeneric.TranslateData(buffer, opts.Shift, opts.BufferSize);
 
-                // TODO: add normalization
+                // prevent overdraw
+                data = normalizer.PreventOverdraw(data, (float)opts.Overdraw);
+
+                // normalize
+                data = normalizer.Next(data);
 
                 Console.WriteLine(JsonConvert.SerializeObject(data));
             };
@@ -33,7 +39,5 @@ namespace PSpectrum.Commands.Action
             Process.GetCurrentProcess().WaitForExit();
             return 0;
         }
-
-        
     }
 }
