@@ -39,7 +39,7 @@ jobs:
         
       # restore nuget packages
       - name: restore nuget packages
-        run: nuget restore "PSpectrum v2\\PSpectrum v2.csproj"
+        run: nuget restore "PSpectrum.sln"
         
       # build
       - name: build
