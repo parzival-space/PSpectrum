@@ -51,7 +51,7 @@ jobs:
           git config --global user.email "malte.linke.ml@gmai.com"
           git config --global user.name "malte-linke"
           git clone https://malte-linke:${{ secrets.API_TOKEN_GITHUB }}@github.com/malte-linke/powercord-pspectrum.git target
-          cp .\PSpectrum\bin\Release\PSpectrum.exe .\target\bin\PSpectrum.exe
+          cp ".\PSpectrum v2\bin\Release\PSpectrum.exe" .\target\bin\PSpectrum.exe
           cd target
           git add .
           git diff-index --quiet HEAD || git commit -m "Automated update of PSpectrum.exe"
