@@ -105,11 +105,11 @@ namespace PSpectrum.Utils
                 int leftMult = ushort.MaxValue / ((audioLeft == 0) ? 1 : audioLeft);
                 int rightMult = ushort.MaxValue / ((audioRight == 0) ? 1 : audioRight);
 
-                // channel left
-                data[i - shift] = dataTemp * leftMult;
-
                 // channel right
-                data[i - shift + bufferSize / 2] = dataTemp * rightMult;
+                data[i - shift] = dataTemp * rightMult;
+
+                // channel left
+                data[i - shift + bufferSize / 2] = dataTemp * leftMult;
             }
 
             return data;

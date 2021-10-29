@@ -6,3 +6,11 @@ C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\PSpectrum.exe.config
 C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum.exe.config
 C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum.exe
 C:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum.pdb
+D:\Users\malte\Desktop\PSpectrum\PSpectrum v2\bin\Debug\PSpectrum.exe.config
+D:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum v2.csproj.AssemblyReference.cache
+D:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum v2.csproj.SuggestedBindingRedirects.cache
+D:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum.Properties.Resources.resources
+D:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum v2.csproj.GenerateResource.cache
+D:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum v2.csproj.CoreCompileInputs.cache
+D:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum.exe
+D:\Users\malte\Desktop\PSpectrum\PSpectrum v2\obj\Debug\PSpectrum.pdb
