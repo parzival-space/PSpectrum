@@ -60,12 +60,12 @@ jobs:
           Remove-Item -Recurse -Force .\target
       
       # create new release of PSpectrum.exe
-      - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.API_TOKEN_GITHUB }}
-          file: "PSpectrum v2\\bin\\Release\\PSpectrum.exe"
-          asset_name: PSpectrum.exe
-          tag: Release
-          prerelease: false
-          overwrite: true
+      #- name: Upload binaries to release
+      #  uses: svenstaro/upload-release-action@v2
+      #  with:
+      #    repo_token: ${{ secrets.API_TOKEN_GITHUB }}
+      #    file: "PSpectrum v2\\bin\\Release\\PSpectrum.exe"
+      #    asset_name: PSpectrum.exe
+      #    tag: Release
+      #    prerelease: false
+      #    overwrite: true
