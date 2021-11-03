@@ -1,4 +1,4 @@
-# PSpectrum Audio Visualizer
+# PSpectrum Audio Visualizer [![wakatime](https://wakatime.com/badge/github/malte-linke/PSpectrum.svg)](https://wakatime.com/badge/github/malte-linke/PSpectrum)
 
 PSpectrum allows programs that can not access the audio devices of your system, to access the audio data of the system. <br>
 I mainly use it for my <a href="https://github.com/malte-linke/powercord-pspectrum">PSpectrum Audio Visualizer</a> for Powercord. <br>
