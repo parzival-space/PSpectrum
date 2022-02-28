@@ -49,13 +49,13 @@ jobs:
       - name: push to powercord plugin
         run: |
           git config --global user.email "malte.linke.ml@gmai.com"
-          git config --global user.name "malte-linke"
-          git clone https://malte-linke:${{ secrets.API_TOKEN_GITHUB }}@github.com/malte-linke/powercord-pspectrum.git target
+          git config --global user.name "parzival-space"
+          git clone https://parzival-space:${{ secrets.API_TOKEN_GITHUB }}@github.com/parzival-space/powercord-pspectrum.git target
           cp ".\PSpectrum v2\bin\Release\PSpectrum.exe" .\target\bin\PSpectrum.exe
           cd target
           git add .
           git diff-index --quiet HEAD || git commit -m "Automated update of PSpectrum.exe"
-          git push https://malte-linke:${{ secrets.API_TOKEN_GITHUB }}@github.com/malte-linke/powercord-pspectrum.git
+          git push https://parzival-space:${{ secrets.API_TOKEN_GITHUB }}@github.com/parzival-space/powercord-pspectrum.git
           cd ..
           Remove-Item -Recurse -Force .\target
       

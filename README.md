@@ -1,7 +1,7 @@
-# PSpectrum Audio Visualizer [![wakatime](https://wakatime.com/badge/github/malte-linke/PSpectrum.svg)](https://wakatime.com/badge/github/malte-linke/PSpectrum)
+# PSpectrum Audio Visualizer [![wakatime](https://wakatime.com/badge/github/parzival-space/PSpectrum.svg)](https://wakatime.com/badge/github/parzival-space/PSpectrum)
 
 PSpectrum allows programs that can not access the audio devices of your system, to access the audio data of the system. <br>
-I mainly use it for my <a href="https://github.com/malte-linke/powercord-pspectrum">PSpectrum Audio Visualizer</a> for Powercord. <br>
+I mainly use it for my <a href="https://github.com/parzival-space/powercord-pspectrum">PSpectrum Audio Visualizer</a> for Powercord. <br>
 You can use the `web` subcommand to start a demo audio visualizer in your browser. <br>
 To capture the system audio I use the Bass library made by <a href="https://www.un4seen.com/">un4seen</a>.
 
